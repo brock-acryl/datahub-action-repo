@@ -1,0 +1,13 @@
+name: "my-datahub-cloud-action"
+datahub:
+  server: "${server}"
+  token: "${token}"
+source:
+  type: "datahub-cloud"
+  config:
+    topics: ["PlatformEvent_v1"]
+    lookback_days: 7
+    reset_offsets: true
+action:
+  type: "sample_cloud_action"
+  config: {}
